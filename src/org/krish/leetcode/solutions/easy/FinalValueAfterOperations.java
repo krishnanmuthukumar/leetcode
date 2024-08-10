@@ -43,6 +43,8 @@ public class FinalValueAfterOperations {
 		String[] operations = { "--X", "X++", "X++" };
 		String[] operations1 = { "X++", "++X", "--X", "X--" };
 		String[] operations2 = { "++X", "++X", "X++" };
+		System.out.println(finalValueAfterOperations(operations));
+		System.out.println(finalValueAfterOperations(operations1));
 		System.out.println(finalValueAfterOperations(operations2));
 	}
 }
