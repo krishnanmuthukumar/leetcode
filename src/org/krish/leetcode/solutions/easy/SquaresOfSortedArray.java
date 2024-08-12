@@ -27,10 +27,33 @@ public class SquaresOfSortedArray {
 		return sqnums;
 	}
 
+	public static int[] sortedSquares2(int[] nums) {
+		int i = 0;
+		int j = nums.length - 1;
+		int[] temp = new int[nums.length];
+		int k = nums.length - 1;
+		while (i < j) {
+			if (nums[i] * nums[i] > nums[j] * nums[j]) {
+				temp[k] = nums[i] * nums[i];
+				i++;
+			} else {
+				temp[k] = nums[j] * nums[j];
+				j--;
+			}
+			k--;
+		}
+		temp[k] = nums[i] * nums[i];
+		return temp;
+	}
+
 	public static void main(String[] args) {
 
 		int[] nums = { -4, -1, 0, 3, 10 };
+		int[] nums1 = {-7,-3,2,3,11};
 		System.out.println(Arrays.toString(nums));
 		System.out.println(Arrays.toString(sortedSquares(nums)));
+		System.out.println(Arrays.toString(sortedSquares2(nums)));
+		System.out.println(Arrays.toString(sortedSquares(nums1)));
+		System.out.println(Arrays.toString(sortedSquares2(nums1)));
 	}
 }
