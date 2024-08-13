@@ -1,4 +1,4 @@
-package org.krish.leetcode.solutions.easy;
+package org.krish.leetcode.solutions.medium;
 
 import java.util.Iterator;
 import java.util.Stack;
